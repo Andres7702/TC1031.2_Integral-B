@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Casos de prueba que ayudaran a saber cuando ya funciones el programa.
+
 void casosPrueba(){
     Graph Ejemplo;
 

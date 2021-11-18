@@ -15,40 +15,48 @@
 
 using namespace std;
 
+//Clase grafo es la estrucutra que guarda la informacion de colindancias de todos los estados
 
 class Graph {
 private:
+    //Variables
     int edgesList;
     int nodes;
     
     vector<int> *adjList;
     vector<string> estados;
     
+    //Metodos de llenado
     void fillEstados();
     void addEdgeAdjList(int, int);
     void loadGraphList();
 
 public:
+    //Constructor
     Graph();
     
+    //Variables
     string BFS(int,int);
     void breadthHelper(int, int, queue<int>&, list<int>&, vector<vector<int>>&, stringstream&);
     
+    //Metodos de impresion
     string printAdjList(int);
     string printfullAdjList();
     void print_path(vector <vector<int>>&,int,int,stringstream&);
     void listEstados();
     
+    //Metodos auxiliares
     bool contains(list<int>, int);
-    void sortAdjList();
 };
 
+//Constructor
 Graph::Graph() {
     edgesList = 0;
     fillEstados();
     loadGraphList();
 }
 
+//fillEstados: Llena el vector que contendra los estados de Mexico
 void Graph :: fillEstados(){
     estados.push_back("Baja California Sur");
     estados.push_back("Baja California");
@@ -84,6 +92,7 @@ void Graph :: fillEstados(){
     estados.push_back("Yucatan");
 }
 
+//loadGraphList: Lea archivo de texto que contiene todas las relaciones de los nodos.
 void Graph:: loadGraphList(){
     adjList = new vector<int>[32];
     nodes = 32;
@@ -102,12 +111,14 @@ void Graph:: loadGraphList(){
         }
 }
 
+//addEdgeAdjList: es un metodo que se encarga de registrar las relaciones de nodos
 void Graph :: addEdgeAdjList(int u, int v) {
     adjList[u].push_back(v);
     adjList[v].push_back(u);
     edgesList++;
 }
 
+//Imprime las relaciones (colindancias) que tiene un estado solicitado
 string Graph::printAdjList(int i){
     stringstream aux;
     string l;
@@ -125,6 +136,7 @@ string Graph::printAdjList(int i){
 
 }
 
+//Imprime las relaciones (colindancias) de todos los estados
 string Graph::printfullAdjList(){
     stringstream aux;
     string l;
@@ -141,7 +153,7 @@ string Graph::printfullAdjList(){
     return aux.str();
 }
 
-
+//BFS: Metodo que se encarga de la busqueda de un nodo dentro del grafo con ayuda de un queue.
 string Graph::BFS(int start, int goal){
         queue <int> q;
         list <int> visited;
@@ -156,6 +168,7 @@ string Graph::BFS(int start, int goal){
         return result;
 }
 
+//breadthHelper: Metodo auxiliar de BFS que se encarga de la busqueda.
 void Graph::breadthHelper(int c, int g, queue<int> &q, list<int> &visited, vector<vector<int>> &paths, stringstream &a){
     if(c == g){
     }
@@ -177,6 +190,8 @@ void Graph::breadthHelper(int c, int g, queue<int> &q, list<int> &visited, vecto
     }
 }
 
+//contains: metodo auxiliar que se encarga de checar la existencia de un nodo
+//dentro de la lista contains
 bool Graph::contains(list<int> ls, int node){
         list<int>::iterator it;
         it = find(ls.begin(), ls.end(), node);
@@ -186,6 +201,8 @@ bool Graph::contains(list<int> ls, int node){
             return false;
 }
 
+//print_path: Metodo que se encarga de imprimir el camino que tomo el nodo de
+//origen hacia su destino.
 void Graph::print_path(vector<vector<int>> &p, int s, int g, stringstream &a){
     int node = p[g][0];
     stack<int> reverse;
@@ -201,6 +218,7 @@ void Graph::print_path(vector<vector<int>> &p, int s, int g, stringstream &a){
     }
 }
 
+//ListEstados: Imprime la lista de estados que contiene el grafo. (Sirve como menu)
 void Graph :: listEstados(){
     for(int i = 0; i<32; i++){
         cout << i;

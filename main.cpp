@@ -1,4 +1,8 @@
-
+//Andrés Acevedo Caracheo
+//Este es un programa planeador de rutas de viajes dentro de la republica Mexicana.
+//El programa utiliza un grafo para calcular la ruta mas rapida desde un estado a
+//otro (Escogue la ruta que recorra menos estados). Ademas de esto el usuario tambien
+//puede consultar las colindancias de cualquier estado.
 
 #include <iostream>
 #include <cstring>
@@ -7,6 +11,7 @@
 
 using namespace std;
 
+//Menu de opciones del programa principal
 void menu(){
     cout<<"\n";
     cout<<"1. Ruta de viaje. \n";
@@ -27,6 +32,7 @@ int main() {
         cin>>opcion;
         cout<<"\n";
         
+        //OPCION 1 Enseña ruta mas corta de un estado a otro.
         if(opcion == 1){
             int origen;
             int destino;
@@ -48,6 +54,7 @@ int main() {
                 cout<<"Error: Tu origen y/o destino no son validos. \n";
             }
         }
+        //OPCION 2 imprime las colindancias de un estado solicitado
         else if(opcion == 2){
             int ed;
             
@@ -67,12 +74,15 @@ int main() {
             }
             
         }
+        //Imprime las colindancias de todos los estados
         else if (opcion == 3){
             cout<<Mexico.printfullAdjList();
         }
+        //Casos de prueba
         else if(opcion == 4){
             casosPrueba();
         }
+        //Opcion no valida
         else{
             cout<<"Error: Tu opcion no es valida. \n";
         }
