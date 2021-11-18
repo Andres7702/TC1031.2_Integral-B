@@ -41,17 +41,29 @@ Clase Graph
     
     addEdgeAdjList: Esta funcion se encarga de marcar la relacion entre dos nodos. Es de complejidad o(1).
     
-    printAdjList: 
+    printAdjList: Esta funcion se encarga de imprimir los estados con los que colinda el estado solicitado. Es de
+    complejidad o(1) por que recorre un vertice y todos sus edges. 
     
-    BFS:
+    printfullAdjList: Esta funcion se encarga de imprimir las colindancias de todos los estados. Como recorre todos los 
+    vertices y edges del grafo su complejidad es de o(n).
     
-    breadthHelper:
+    BFS: Esta funcion como tal solo se encarga de inicializar las variables que necesitaremos para el BFS ademas de mandar
+    a llamar a la funcion breadthHelper y print_paths.
     
-    contains:
+    breadthHelper: Esta es la funcion que hace que el BFS funcione. recorre el grafo con ayuda de un queue para encontrar
+    el nodo solicitado. En su peor de los casos la funcion debe de recorrer todos sus vertices y edges por lo que 
+    es de complejidad o(n). En la mayoria de los casos la funcion es de o(logn) ya que el peor caso solo sucede con 
+    en algunos casos especificos.
     
-    print_path:
+    contains: contains se encarga de checar que un nodo no exista ya dentro de la lista visited. en su peor caso
+    tiene que recorrer la lista completa por lo que es de complejidad o(n). 
     
-    listEstados:
+    print_path: print path se encarga de imprimir el camino que tomo el nodo para llegar al destino. La funcion
+    recorre un parte de una lista que guarda esta informacion y en ninguna caso tiene que recorrer la lista
+    completa, por lo qe su complejidad es de o(logn)
+    
+    listEstados: Esta funcion se encarga de imprimir un listados con todos los estados que contiene el grafo. Su
+    complejidad es de o(n).
     
     
 # SICT0303B: Implementa Acciones Cientificas
