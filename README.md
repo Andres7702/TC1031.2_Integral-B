@@ -2,7 +2,7 @@
 
 Este es un programa planeador de rutas de viajes dentro de la republica Mexicana. El programa utiliza un grafo 
 para calcular la ruta mas rapida desde un estado a otro (Escogue la ruta que recorra menos estados). Ademas de 
-esto el usuario tambien pude consultar que otros estados colindancon cualquier otro.
+esto el usuario tambien puede consultar las colindancias de cualquier estado.
 
 
 # SICT0302B: Toma decisiones
