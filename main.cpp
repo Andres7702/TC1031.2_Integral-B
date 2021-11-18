@@ -10,8 +10,9 @@ using namespace std;
 void menu(){
     cout<<"\n";
     cout<<"1. Ruta de viaje. \n";
-    cout<<"2. Colindancias. \n";
-    cout<<"3. CASOS DE PRUEBA. \n";
+    cout<<"2. Colindancias de Estado. \n";
+    cout<<"3. Colindancias de todos los Estados. \n";
+    cout<<"4. CASOS DE PRUEBA. \n";
     cout<<"\n";
 }
 
@@ -66,7 +67,10 @@ int main() {
             }
             
         }
-        else if(opcion == 3){
+        else if (opcion == 3){
+            cout<<Mexico.printfullAdjList();
+        }
+        else if(opcion == 4){
             casosPrueba();
         }
         else{

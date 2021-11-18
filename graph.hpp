@@ -35,6 +35,7 @@ public:
     void breadthHelper(int, int, queue<int>&, list<int>&, vector<vector<int>>&, stringstream&);
     
     string printAdjList(int);
+    string printfullAdjList();
     void print_path(vector <vector<int>>&,int,int,stringstream&);
     void listEstados();
     
@@ -123,6 +124,23 @@ string Graph::printAdjList(int i){
     return l;
 
 }
+
+string Graph::printfullAdjList(){
+    stringstream aux;
+    string l;
+    aux << "\n";
+    for(int i = 0; i < 32; i++){
+        aux << estados[i]<<" colinda con"<< " :"<<"\n";
+        for (int j = 0; j < adjList[i].size(); j ++){
+            aux << estados[adjList[i][j]]<<", ";
+        }
+        aux<<"\n";
+        aux<<"\n";
+    }
+    
+    return aux.str();
+}
+
 
 string Graph::BFS(int start, int goal){
         queue <int> q;
