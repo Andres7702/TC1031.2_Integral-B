@@ -77,3 +77,14 @@ Implementa mecanismos de lectura de archivos correctos y útiles dentro de un pr
 
 El programa lee el archivo colinda.txt y este archivo de texto se encarga de hacer todas las conexiones de los nodos del grafo.
 
+# NOTA
+
+Con esta entrega espero demostrar las evidencias:
+
+    Usa grafos para hacer analisis de información
+    Usa un algoritmo de búsqueda en grafos adecuado para resolver un problema
+    Presenta Casos de Prueba correctos y completos para todas las funciones y procedimientos del programa
+    Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes
+    Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa
+    Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa
+    
