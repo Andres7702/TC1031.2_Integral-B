@@ -121,17 +121,17 @@ Consulta:
     
     La consulta de datos se puede hacer de varias formas. 
     
-    Una de ellas es utilizando corchectes. Para se escribe el nombre del mapa y dentro de los corchetes se escribe la llave. 
-    El resultado es el valor guardado dentro de dicha llave. 
+    Una de ellas es utilizando corchectes. Para esto se escribe el nombre del mapa y dentro de los corchetes se escribe 
+    la llave. El resultado es el valor guardado dentro de dicha llave. 
     
     Ejemplo:
     cout<<Estados[1]; 
     Resultado: Baja California
     
-    Otra manera de consulta es utilizando un iterador. Dentro de map existen las funciones begin y end que sirven para crear
-    un iterador que sabe donde empieza el map y en donde termina. Ademas de esto tambien existen las funciones first y second.
-    First devuelve el valor de llave y second devuelve el valor guardado. Utilizando todas estas funciones se puede crear un 
-    iterador que recorre el map completo, imprimiendo los valores de llave y los valores guardados.
+    Otra manera de consulta es utilizando un iterador. Dentro de map existen las funciones begin y end que sirven 
+    para crear un iterador que sabe donde empieza el map y en donde termina. Ademas de esto tambien existen las funciones 
+    first y second. First devuelve el valor de llave y second devuelve el valor guardado. Utilizando todas estas funciones 
+    se puede crear un iterador que recorre el map completo, imprimiendo los valores de llave y los valores guardados.
     
     Ejemplo:
     for (std::map<char,int>::iterator it=Estados.begin(); it!=Estados.end(); ++it)
@@ -144,8 +144,8 @@ Consulta:
     
 Borrado:
 
-    Para eliminar elementos del map, existe la funcion erase. Esta funcion recive como parametro la llave que se quiere borrar
-    y lo elimina del map.
+    Para eliminar elementos del map, existe la funcion erase. Esta funcion recive como parametro la llave que se quiere 
+    borrar y lo elimina del map.
     
     Ejemplo:
     Estados.erase(1)
