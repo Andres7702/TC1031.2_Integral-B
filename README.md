@@ -85,9 +85,26 @@ consultar las colindancias de un estado en especifico tambien se puede.
 El programa lee el archivo colinda.txt y este archivo de texto se encarga de hacer todas las conexiones de los nodos del grafo.
 
 ### Implementa mecanismos de escritura de archivos correctos:
+
 En el programa cuando buscas una ruta para hacer un viaje, se hace registro dentro de una variable que se llama "historial". Esta 
 variable despues es escrita en un archivo de texto llamado "Historial.txt" en donde se tendra un registro de todos los viajes
 consultados.
+
+# SEG0702A Tecnologias de Vanguardia
+
+### Investiga e implementa un algoritmo o una estructura de datos que no se vió durante el curso.
+
+La estructura de datos que investigue e implemente es la de "map". Este es un contenedor asociativo que guarda datos
+utilizando una combinacion de llave y valor mappeado. Puedes guardar datos utilizando una llave unica. Para consultar un dato
+guardado se tiene que proporcionar la llave de dicho dato.
+
+Yo lo implemente para que dentro de este map se guardaran todos los estados de la republica y sus llaves son valores del 0 al 31.
+Cada nodo del grafo tiene un valor numerico y sus conexiones a otros nodos. Al mandar a llamar una funcion que imprima los nodos 
+o sus conexiones, se pasan los valores al map para que en lugar de imprimir numeros imprima los estados.
+
+### Describe cada algoritmo de la estructura (inserción, consulta, etc...) de forma clara y con ejemplos
+
+
 
 # NOTA
 
