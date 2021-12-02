@@ -23,9 +23,11 @@ permite encontrar la ruta mas sencilla entre origen y destino.
 
 ### Presenta Casos de Prueba correctos y completos para todas las funciones y procedimientos del programa:
 
-Los casos de pruebas para todas las funciones se encuentran en "casos_de_prueba.hpp" donde se prueban las funciones:
-BFS y printAdjList. Dentro de dichas funciones se encuentran la mayoria de las funciones. Ademas, tambien se crea un
-objeto de tipo Graph y dentro de su constructor se prueban las funciones faltantes. 
+Los casos de pruebas para todas las funciones se encuentran en "casos_de_prueba.hpp" donde se crea un objeto tipo "Graph"
+nuevo y se prueban las funciones de "BFS" y "printAdjList". Dentro de dichas funciones y dentro del constructor del 
+objeto, se prueban la gran mayoria de las funciones del programa. 
+Se hace una comparación entre lo imprimeso y el resultado que deberia de ser. Si los casos de prueba funcionan se 
+mandara un mensaje de success y si fallan de fail.
     
     
 ### Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes:
