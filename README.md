@@ -30,6 +30,11 @@ objeto de tipo Graph y dentro de su constructor se prueban las funciones faltant
     
 ### Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes:
 
+Main
+    
+    add_historial: Esta función escirbe la variable "historial", dentro del archivo "Historial.txt". La funcion
+    tiene que recorrer todos los caracteres del string historial por lo que es de complejidad o(n).
+
 Clase Graph
 
     fillEstados: fill estados es una funcion que se encarga de llenar un vector de string con los estados de la republica. 
@@ -76,6 +81,11 @@ consultar las colindancias de un estado en especifico tambien se puede.
 ### Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa:
 
 El programa lee el archivo colinda.txt y este archivo de texto se encarga de hacer todas las conexiones de los nodos del grafo.
+
+### Implementa mecanismos de escritura de archivos correctos:
+En el programa cuando buscas una ruta para hacer un viaje, se hace registro dentro de una variable que se llama "historial". Esta 
+variable despues es escrita en un archivo de texto llamado "Historial.txt" en donde se tendra un registro de todos los viajes
+consultados.
 
 # NOTA
 
