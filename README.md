@@ -38,10 +38,6 @@ Main
     tiene que recorrer todos los caracteres del string historial por lo que es de complejidad o(n).
 
 Clase Graph
-
-    fillEstados: fill estados es una funcion que se encarga de llenar un vector de string con los estados de la republica. 
-    Esto para relacionar los numeros del grafo con los estados de Mexico. Como tiene que llenar todo el vector de relacion 
-    completo esta funcion es de complejidad o(n).
     
     loadGraphList: Esta funcion se encarga de leer un archivo de texto para hacer las relaciones de cada nodo del grafo.
     Como la funcion tiene que realizar todas las relaciones de los nodos su complejidad es de o(n).
@@ -66,10 +62,16 @@ Clase Graph
     tiene que recorrer la lista completa por lo que es de complejidad o(n). 
     
     print_path: print path se encarga de imprimir el camino que tomo el nodo para llegar al destino. La funcion
-    recorre un parte de una lista que guarda esta informacion y en ninguna caso tiene que recorrer la lista
+    recorre un parte de una lista que guarda esta informacion y en ningun caso tiene que recorrer la lista
     completa, por lo qe su complejidad es de o(logn)
     
-    listEstados: Esta funcion se encarga de imprimir un listados con todos los estados que contiene el grafo. Su
+Map
+    
+    fillEstados: fill estados es una funcion que se encarga de asociar valores numericos con un estado de mexico
+    dentri de un map. Esto para relacionar los numeros del grafo con los estados de Mexico. Como tiene que llenar 
+    el map con todos los estados esta funcion es de complejidad o(n).
+    
+    listEstados: Esta funcion se encarga de imprimir un listado con todos los estados que contiene el map. Su
     complejidad es de o(n).
     
     
@@ -104,7 +106,52 @@ o sus conexiones, se pasan los valores al map para que en lugar de imprimir nume
 
 ### Describe cada algoritmo de la estructura (inserción, consulta, etc...) de forma clara y con ejemplos
 
+Al declarar esta estructura se tienen que especificar 2 tipos de datos, el de la llave y el del valor que se guardara.
 
+Insert: 
+    Para insertar un valor al mapa se tiene que usar la funcion insert. A esta funcion se le mandan dos parametros,
+    el primero es el de la llave y el segundo es el del valor. Los tipos de valor tiene que coincidir con los declarados 
+    originalmente. 
+    
+    Ejemplo:
+    Estados.insert(1,"Baja California");
+    
+Consulta: 
+    
+    La consulta de datos se puede hacer de varias formas. 
+    
+    Una de ellas es utilizando corchectes. Para se escribe el nombre del mapa y dentro de los corchetes se escribe la llave. 
+    El resultado es el valor guardado dentro de dicha llave. 
+    
+    Ejemplo:
+    cout<<Estados[1]; 
+    Resultado: Baja California
+    
+    Otra manera de consulta es utilizando un iterador. Dentro de map existen las funciones begin y end que sirven para crear
+    un iterador que sabe donde empieza el map y en donde termina. Ademas de esto tambien existen las funciones first y second.
+    First devuelve el valor de llave y second devuelve el valor guardado. Utilizando todas estas funciones se puede crear un 
+    iterador que recorre el map completo, imprimiendo los valores de llave y los valores guardados.
+    
+    Ejemplo:
+    for (std::map<char,int>::iterator it=Estados.begin(); it!=Estados.end(); ++it)
+    std::cout << it->first << " => " << it->second << '\n';
+    Resultado: 
+    1 => Baja California
+    2 => Guanajuato
+    3 => Colima
+    ...
+    
+Borrado:
+
+    Para eliminar elementos del map, existe la funcion erase. Esta funcion recive como parametro la llave que se quiere borrar
+    y lo elimina del map.
+    
+    Ejemplo:
+    Estados.erase(1)
+    Resultado: 
+    2 => Guanajuato
+    3 => Colima
+    ...
 
 # CORRECCIONES
 
