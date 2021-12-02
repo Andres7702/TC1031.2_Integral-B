@@ -12,6 +12,7 @@
 #include <stack>
 #include <list>
 #include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -24,7 +25,10 @@ private:
     int nodes;
     
     vector<int> *adjList;
-    vector<string> estados;
+    
+    //guardaremos los estados en una estructura llamada map.
+    //la llave es de tipo int y el contenido es string.
+    map<int, string> estados;
     
     //Metodos de llenado
     void fillEstados();
@@ -56,40 +60,40 @@ Graph::Graph() {
     loadGraphList();
 }
 
-//fillEstados: Llena el vector que contendra los estados de Mexico
+//fillEstados: llena el map asociando un estado a cada llave del 0 al 31.
 void Graph :: fillEstados(){
-    estados.push_back("Baja California Sur");
-    estados.push_back("Baja California");
-    estados.push_back("Sonora");
-    estados.push_back("Chihuaha");
-    estados.push_back("Coahuila");
-    estados.push_back("Nuevo Leon");
-    estados.push_back("Tamaulipas");
-    estados.push_back("Sinaloa");
-    estados.push_back("Durango");
-    estados.push_back("Zacatecas");
-    estados.push_back("San Luis Potosi");
-    estados.push_back("Veracruz");
-    estados.push_back("Nayarit");
-    estados.push_back("Jalisco");
-    estados.push_back("Aguascalientes");
-    estados.push_back("Guanajuato");
-    estados.push_back("Queretaro");
-    estados.push_back("Hidalgo");
-    estados.push_back("Colima");
-    estados.push_back("Michoacan");
-    estados.push_back("Estado de Mexico");
-    estados.push_back("Ciudad de Mexico");
-    estados.push_back("Morelos");
-    estados.push_back("Tlaxcala");
-    estados.push_back("Puebla");
-    estados.push_back("Guerrero");
-    estados.push_back("Oaxaca");
-    estados.push_back("Chiapas");
-    estados.push_back("Tabasco");
-    estados.push_back("Campeche");
-    estados.push_back("Quintana Roo");
-    estados.push_back("Yucatan");
+    estados[0] = ("Baja California Sur");
+    estados[1] = ("Baja California");
+    estados[2] = ("Sonora");
+    estados[3] = ("Chihuaha");
+    estados[4] = ("Coahuila");
+    estados[5] = ("Nuevo Leon");
+    estados[6] = ("Tamaulipas");
+    estados[7] = ("Sinaloa");
+    estados[8] = ("Durango");
+    estados[9] = ("Zacatecas");
+    estados[10] = ("San Luis Potosi");
+    estados[11] = ("Veracruz");
+    estados[12] = ("Nayarit");
+    estados[13] = ("Jalisco");
+    estados[14] = ("Aguascalientes");
+    estados[15] = ("Guanajuato");
+    estados[16] = ("Queretaro");
+    estados[17] = ("Hidalgo");
+    estados[18] = ("Colima");
+    estados[19] = ("Michoacan");
+    estados[20] = ("Estado de Mexico");
+    estados[21] = ("Ciudad de Mexico");
+    estados[22] = ("Morelos");
+    estados[23] = ("Tlaxcala");
+    estados[24] = ("Puebla");
+    estados[25] = ("Guerrero");
+    estados[26] = ("Oaxaca");
+    estados[27] = ("Chiapas");
+    estados[28] = ("Tabasco");
+    estados[29] = ("Campeche");
+    estados[30] = ("Quintana Roo");
+    estados[31] = ("Yucatan");
 }
 
 //loadGraphList: Lea archivo de texto que contiene todas las relaciones de los nodos.
