@@ -97,4 +97,5 @@ Con esta entrega espero demostrar las evidencias:
     Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes
     Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa
     Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa
+    Implementa mecanismos de escritura de archivos correctos
     
