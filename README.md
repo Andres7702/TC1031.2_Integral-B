@@ -109,6 +109,7 @@ o sus conexiones, se pasan los valores al map para que en lugar de imprimir nume
 Al declarar esta estructura se tienen que especificar 2 tipos de datos, el de la llave y el del valor que se guardara.
 
 Insert: 
+
     Para insertar un valor al mapa se tiene que usar la funcion insert. A esta funcion se le mandan dos parametros,
     el primero es el de la llave y el segundo es el del valor. Los tipos de valor tiene que coincidir con los declarados 
     originalmente. 
