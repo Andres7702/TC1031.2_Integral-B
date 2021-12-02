@@ -106,7 +106,7 @@ o sus conexiones, se pasan los valores al map para que en lugar de imprimir nume
 
 
 
-# NOTA
+# CORRECCIONES
 
 Con esta entrega espero demostrar las evidencias:
 
@@ -117,4 +117,6 @@ Con esta entrega espero demostrar las evidencias:
     Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa
     Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa
     Implementa mecanismos de escritura de archivos correctos
+    Investiga e implementa un algoritmo o una estructura de datos que no se vió durante el curso.
+    Describe cada algoritmo de la estructura (inserción, consulta, etc...) de forma clara y con ejemplos
     
