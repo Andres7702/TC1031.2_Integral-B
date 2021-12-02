@@ -21,7 +21,24 @@ void menu(){
     cout<<"\n";
 }
 
+void add_historial(string historial){
+    std::ofstream archivo;
+
+    archivo.open("Historial.txt");
+    if( archivo ) {
+        archivo << "Rutas pasadas:";
+        for (int i = 0; i < historial.size(); ++i)
+        archivo << historial[i];
+        archivo.close();
+    }
+    else{
+        cout << "Error: No se pudo guardar el historial" << endl;
+    }
+}
+
 int main() {
+    
+    string historial;
 
     Graph Mexico;
     
@@ -46,9 +63,17 @@ int main() {
             cout<<"\n";
             
             if(destino < 32 && destino > -1 && origen < 32 && origen > -1){
+                string ruta;
                 cout<<"Ruta sugerida: \n";
-                cout<<Mexico.BFS(origen,destino);
+                ruta = Mexico.BFS(origen,destino);
+                cout<<ruta;
                 cout<<"\n";
+                
+                historial += "\n \n";
+                historial += ruta;
+                
+                add_historial(historial);
+                
             }
             else{
                 cout<<"Error: Tu origen y/o destino no son validos. \n";
