@@ -156,6 +156,8 @@ Borrado:
 
 # CORRECCIONES
 
+No hice entrega de estructura nueva, pero en esta version ya esta implementada.
+
 Con esta entrega espero demostrar las evidencias:
 
     Usa grafos para hacer analisis de información
